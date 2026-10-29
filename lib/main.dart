@@ -53,15 +53,19 @@ class ProfilePage extends StatelessWidget {
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
-              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
             const Text(
               'Mahasiswa Teknik Informatika',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'ilham@email.com',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 14,
+                color: Colors.grey,
               ),
-              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             ElevatedButton.icon(
