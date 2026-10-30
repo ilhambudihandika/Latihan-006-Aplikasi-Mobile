@@ -1,13 +1,12 @@
 
 # Aplikasi Profil
 
-Project Flutter untuk tugas aplikasi mobile. Aplikasi ini menampilkan profil mahasiswa dengan nama, jurusan, email, dan tombol edit profil.
+Project Flutter untuk tugas aplikasi mobile. Aplikasi ini menampilkan halaman profil sederhana.
 
 ## Fitur
-- Profil mahasiswa
-- Nama dan jurusan
-- Email mahasiswa
-- Tombol Edit Profil
+- Foto profil
+- Nama mahasiswa
+- Jurusan mahasiswa
 
 ## Perkembangan
-Hari kedua menambahkan informasi email pada halaman profil.
+Hari pertama membuat kerangka utama halaman profil.
