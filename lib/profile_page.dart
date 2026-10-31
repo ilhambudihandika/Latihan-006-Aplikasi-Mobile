@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'profile_stats.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -9,21 +10,25 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('Profil Pengguna'),
+        title: const Text('Tentang Saya'),
         centerTitle: true,
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            ProfileAvatar(),
-            SizedBox(height: 20),
-            ProfileInfo(),
-            SizedBox(height: 30),
-            ProfileStats(),
-          ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: const [
+                ProfileAvatar(),
+                SizedBox(height: 20),
+                ProfileInfo(),
+                SizedBox(height: 30),
+                ProfileStats(),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -56,82 +61,39 @@ class ProfileInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        Text(
-          'PROFIL MAHASISWA',
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.blue,
-            letterSpacing: 2,
-          ),
-        ),
-        SizedBox(height: 10),
-        Text(
-          'Ilham Budi Handika',
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 8),
-        Text(
-          'Mahasiswa Teknik Informatika',
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.grey,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ProfileStats extends StatelessWidget {
-  const ProfileStats({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
-        Column(
-          children: [
+    return Card(
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: const [
             Text(
-              '12',
+              'PROFILE MAHASISWA',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 12,
+                color: Colors.blue,
+                letterSpacing: 2,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Ilham Budi Handika',
+              style: TextStyle(
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('Projects'),
-          ],
-        ),
-        Column(
-          children: [
+            SizedBox(height: 8),
             Text(
-              '120',
+              'Teknik Informatika',
               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.grey,
               ),
             ),
-            Text('Followers'),
           ],
         ),
-        Column(
-          children: [
-            Text(
-              '80',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text('Following'),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }
