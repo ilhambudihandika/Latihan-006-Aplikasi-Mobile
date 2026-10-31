@@ -21,6 +21,8 @@ class ProfilePage extends StatelessWidget {
             ProfileAvatar(),
             SizedBox(height: 20),
             ProfileInfo(),
+            SizedBox(height: 30),
+            ProfileStats(),
           ],
         ),
       ),
@@ -79,6 +81,55 @@ class ProfileInfo extends StatelessWidget {
             fontSize: 16,
             color: Colors.grey,
           ),
+        ),
+      ],
+    );
+  }
+}
+
+class ProfileStats extends StatelessWidget {
+  const ProfileStats({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: const [
+        Column(
+          children: [
+            Text(
+              '12',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('Projects'),
+          ],
+        ),
+        Column(
+          children: [
+            Text(
+              '120',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('Followers'),
+          ],
+        ),
+        Column(
+          children: [
+            Text(
+              '80',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('Following'),
+          ],
         ),
       ],
     );
