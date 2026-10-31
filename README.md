@@ -8,6 +8,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - Statistik Projects
 - Statistik Followers
 - Statistik Following
+- Tampilan kartu informasi mahasiswa
 
 ## Struktur Widget
 - `MyApp`
@@ -15,6 +16,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - `ProfileAvatar`
 - `ProfileInfo`
 - `ProfileStats`
+- `StatItem`
 
 ## Perkembangan
-Pada hari kedua, menambahkan bagian statistik profil yang menampilkan jumlah Projects, Followers, dan Following menggunakan Row dan Column.
+Pada hari kedua, merapikan kode dengan memisahkan bagian statistik menjadi widget ProfileStats dan StatItem. Tampilan profil juga diperbarui agar informasi mahasiswa terlihat lebih rapi.
