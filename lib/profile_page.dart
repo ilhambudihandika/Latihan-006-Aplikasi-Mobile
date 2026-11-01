@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'profile_stats.dart';
+import 'experience_card.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -55,13 +56,9 @@ class ProfilePage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: experiences.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    child: ListTile(
-                      title: Text(experiences[index]['title']!),
-                      subtitle: Text(
-                        experiences[index]['description']!,
-                      ),
-                    ),
+                  return ExperienceCard(
+                    title: experiences[index]['title']!,
+                    description: experiences[index]['description']!,
                   );
                 },
               ),
