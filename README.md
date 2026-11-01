@@ -7,7 +7,8 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - Nama dan jurusan mahasiswa
 - Statistik Projects, Followers, dan Following
 - Daftar pengalaman mahasiswa
-- Tampilan daftar menggunakan ListView.builder
+- Ikon pada setiap daftar pengalaman
+- Tampilan kartu dengan bayangan
 
 ## Struktur Widget
 - `MyApp`
@@ -16,7 +17,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - `ProfileInfo`
 - `ProfileStats`
 - `StatItem`
+- `ExperienceCard`
 
 ## Perkembangan
-Pada hari ketiga, menambahkan bagian pengalaman mahasiswa menggunakan Expanded dan ListView.builder. Daftar pengalaman berisi beberapa kegiatan dengan data dummy dan dapat ditampilkan secara scroll.
-
+Pada hari ketiga, memisahkan tampilan daftar pengalaman menjadi widget ExperienceCard. Setiap kartu dilengkapi ikon dan efek bayangan agar tampilannya lebih rapi.
