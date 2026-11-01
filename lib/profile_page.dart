@@ -5,30 +5,68 @@ import 'profile_stats.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
+  final List<Map<String, String>> experiences = const [
+    {
+      'title': 'Belajar Flutter',
+      'description': 'Mempelajari dasar pengembangan aplikasi mobile.',
+    },
+    {
+      'title': 'Membuat Aplikasi Profil',
+      'description': 'Membuat halaman profil menggunakan Flutter.',
+    },
+    {
+      'title': 'Belajar Pemrograman Dart',
+      'description': 'Mempelajari dasar bahasa pemrograman Dart.',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('Tentang Saya'),
+        title: const Text('Profil Mahasiswa'),
         centerTitle: true,
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: const [
-                ProfileAvatar(),
-                SizedBox(height: 20),
-                ProfileInfo(),
-                SizedBox(height: 30),
-                ProfileStats(),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const ProfileAvatar(),
+            const SizedBox(height: 20),
+            const ProfileInfo(),
+            const SizedBox(height: 25),
+            const ProfileStats(),
+            const SizedBox(height: 25),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Pengalaman',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-          ),
+            const SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: experiences.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: ListTile(
+                      title: Text(experiences[index]['title']!),
+                      subtitle: Text(
+                        experiences[index]['description']!,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -68,7 +106,7 @@ class ProfileInfo extends StatelessWidget {
         child: Column(
           children: const [
             Text(
-              'PROFILE MAHASISWA',
+              'BIODATA MAHASISWA',
               style: TextStyle(
                 fontSize: 12,
                 color: Colors.blue,
