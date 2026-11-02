@@ -10,6 +10,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - Ikon pada setiap daftar pengalaman
 - Tampilan kartu dengan bayangan
 - Pengaturan jarak dan padding antar-komponen
+- Tombol Edit Profil dengan notifikasi
 
 ## Struktur Widget
 - `MyApp`
@@ -21,4 +22,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - `ExperienceCard`
 
 ## Perkembangan
-Pada hari keempat, merapikan tampilan halaman profil dengan menyesuaikan padding dan jarak antar-komponen. Pengaturan ini dilakukan agar setiap bagian terlihat lebih rapi dan nyaman dilihat.
+Pada tahap terakhir, menambahkan tombol Edit Profil pada halaman profil mahasiswa. Tombol tersebut menampilkan notifikasi bahwa fitur edit profil belum tersedia ketika ditekan.
+
+## Kesimpulan
+Aplikasi profil mahasiswa telah dibuat menggunakan Flutter dengan beberapa widget yang dipisahkan agar kode lebih mudah dipahami dan dikelola.
