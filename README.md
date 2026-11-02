@@ -9,6 +9,7 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - Daftar pengalaman mahasiswa
 - Ikon pada setiap daftar pengalaman
 - Tampilan kartu dengan bayangan
+- Pengaturan jarak dan padding antar-komponen
 
 ## Struktur Widget
 - `MyApp`
@@ -20,4 +21,4 @@ Project Flutter untuk tugas mata kuliah Aplikasi Mobile. Aplikasi ini menampilka
 - `ExperienceCard`
 
 ## Perkembangan
-Pada hari ketiga, memisahkan tampilan daftar pengalaman menjadi widget ExperienceCard. Setiap kartu dilengkapi ikon dan efek bayangan agar tampilannya lebih rapi.
+Pada hari keempat, merapikan tampilan halaman profil dengan menyesuaikan padding dan jarak antar-komponen. Pengaturan ini dilakukan agar setiap bagian terlihat lebih rapi dan nyaman dilihat.
