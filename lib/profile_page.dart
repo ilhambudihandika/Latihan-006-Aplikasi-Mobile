@@ -37,12 +37,34 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 15),
+
               const ProfileAvatar(),
+
               const SizedBox(height: 25),
+
               const ProfileInfo(),
+
+              const SizedBox(height: 20),
+
+              ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text(
+                        'Fitur edit profil belum tersedia',
+                      ),
+                    ),
+                  );
+                },
+                child: const Text('Edit Profil'),
+              ),
+
               const SizedBox(height: 30),
+
               const ProfileStats(),
+
               const SizedBox(height: 35),
+
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -53,7 +75,9 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
+
               const SizedBox(height: 15),
+
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
