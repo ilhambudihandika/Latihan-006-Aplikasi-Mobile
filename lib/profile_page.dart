@@ -31,39 +31,45 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const ProfileAvatar(),
-            const SizedBox(height: 20),
-            const ProfileInfo(),
-            const SizedBox(height: 25),
-            const ProfileStats(),
-            const SizedBox(height: 25),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Pengalaman',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            children: [
+              const SizedBox(height: 15),
+              const ProfileAvatar(),
+              const SizedBox(height: 25),
+              const ProfileInfo(),
+              const SizedBox(height: 30),
+              const ProfileStats(),
+              const SizedBox(height: 35),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Pengalaman',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: ListView.builder(
+              const SizedBox(height: 15),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: experiences.length,
                 itemBuilder: (context, index) {
-                  return ExperienceCard(
-                    title: experiences[index]['title']!,
-                    description: experiences[index]['description']!,
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: ExperienceCard(
+                      title: experiences[index]['title']!,
+                      description: experiences[index]['description']!,
+                    ),
                   );
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -99,7 +105,7 @@ class ProfileInfo extends StatelessWidget {
     return Card(
       elevation: 2,
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(24),
         child: Column(
           children: const [
             Text(
@@ -110,7 +116,7 @@ class ProfileInfo extends StatelessWidget {
                 letterSpacing: 2,
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 12),
             Text(
               'Ilham Budi Handika',
               style: TextStyle(
@@ -118,7 +124,7 @@ class ProfileInfo extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 10),
             Text(
               'Teknik Informatika',
               style: TextStyle(
